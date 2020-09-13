@@ -1,6 +1,10 @@
 /* CSS VARIABLES */
 :root {
-  --primaryBlack: rgba(0, 0, 0);
+  --primaryBlack: rgb(0, 0, 0);
+  --primaryBlue: rgb(0 116 255);
+  --primaryGrey: rgb(206, 212, 218);
+  --secondGrey: rgb(222, 226, 230);
+  --thridGrey: rgb(233, 236, 239);
   --primaryTransition: all 0.3s linear;
 }
 /* UNIVERSAL STYLES */
@@ -23,6 +27,26 @@ img {
   display: block;
   width: 100%;
 }
+.page__section {
+  width: 100%;
+  padding: 90px 50px 50px 50px;
+  margin: 0 auto;
+}
+.section__heading {
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+}
+.section__line {
+  width: 100px;
+  height: 5px;
+  margin: 15px auto;
+  background-color: var(--primaryBlue);
+}
+.section__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 /* HEADER */
 .header {
   position: fixed;
@@ -30,14 +54,16 @@ img {
   left: 0;
   width: 100%;
   height: 60px;
+  background-color: var(--primaryGrey);
   padding: 0 20px;
   border-bottom: 2px solid var(--primaryBlack);
+  box-shadow: 0 1px 1px var(--primaryBlack);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 1;
 }
 .link__top {
   text-decoration: none;
@@ -70,4 +96,224 @@ img {
   text-decoration: none;
   color: var(--primaryBlack);
   padding: 10px 10px;
+}
+/* HAMBURGER MENU */
+@media screen and (max-width: 950px) {
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: -1;
+  }
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 57px;
+    height: 57px;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 57px;
+    height: 57px;
+    padding: 10px;
+    background-color: var(--primaryGrey);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: var(--primaryBlack);
+    transition: var(--primaryTransition);
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 5px;
+    background: inherit;
+    z-index: 1;
+  }
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+  .menu-wrap .toggler:checked + .hamburger {
+    background-color: var(--primaryGrey);
+  }
+  .menu-wrap .toggler:checked + .hamburger > div {
+    background-color: var(--primaryBlack);
+    transform: rotate(135deg);
+  }
+  .menu-wrap .toggler:checked + .hamburger > div::before,
+  .menu-wrap .toggler:checked + .hamburger > div::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 0.3s;
+  }
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.3s linear 0.4s;
+  }
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-wrap .menu > div {
+    width: 250vw;
+    height: 250vw;
+    background-color: rgba(206, 212, 218, 0.95);
+    border-radius: 20px;
+    transform: scale(0);
+    transition: var(--primaryTransition);
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-wrap .menu > div > div {
+    max-width: 90vw;
+    max-height: 100vh;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--primaryBlack);
+    padding: 10px;
+    margin: 10px;
+  }
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s linear;
+  }
+}
+/* BANNER */
+.banner {
+  position: relative;
+  height: 100vh;
+  background-color: rgba(206, 212, 218, 0.75);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.banner__heading {
+  font-size: 10rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 0 30px;
+}
+.banner__paragraph {
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 30px 0 30px;
+}
+.banner__btn {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--primaryBlack);
+  background-color: rgba(206, 212, 218, 0.8);
+  padding: 10px 30px;
+  margin-top: 20px;
+  border: 5px solid var(--primaryBlue);
+  border-radius: 20px;
+  transition: var(--primaryTransition);
+}
+.banner__btn:hover {
+  transform: scale(1.1);
+}
+.banner__btn:active {
+  transform: scale(1);
+}
+/* ABOUT ME */
+.about-me {
+  background-color: var(--secondGrey);
+}
+/* PROJECTS */
+.projects {
+  background-color: var(--thridGrey);
+}
+/* SKILLS */
+.skills {
+  background-color: var(--secondGrey);
+}
+/* CONTACT ME */
+.contact-me {
+  background-color: var(--thridGrey);
+}
+/* FOOTER */
+.footer {
+  background-color: var(--secondGrey);
+}
+.copy-right {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px 0;
+}
+/* MEDIA QUERIES FOR HEADER SECTION */
+@media screen and (min-width: 951px) {
+  .menu-wrap {
+    display: none;
+  }
+}
+@media screen and (max-width: 950px) {
+  .top__nav {
+    display: none;
+  }
 }
