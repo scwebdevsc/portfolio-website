@@ -1,5 +1,7 @@
 /* CSS VARIABLES */
 :root {
+  --primaryBlack: rgba(0, 0, 0);
+  --primaryTransition: all 0.3s linear;
 }
 /* UNIVERSAL STYLES */
 *,
@@ -14,8 +16,58 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-family: "Rubik", sans-serif;
+  color: var(--primaryBlack);
 }
 img {
   display: block;
   width: 100%;
+}
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  border-bottom: 2px solid var(--primaryBlack);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.link__top {
+  text-decoration: none;
+  color: var(--primaryBlack);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.logo__photo {
+  width: 50px;
+  height: 50px;
+}
+.logo__heading {
+  font-size: 30px;
+  font-weight: 700;
+}
+.top__nav--item {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 3rem;
+  font-weight: 700;
+  transition: var(--primaryTransition);
+}
+.top__nav--item:hover {
+  transform: scale(1.1);
+}
+.top__nav--link {
+  text-decoration: none;
+  color: var(--primaryBlack);
+  padding: 10px 10px;
 }
