@@ -1,10 +1,11 @@
 /* CSS VARIABLES */
 :root {
   --primaryBlack: rgb(0, 0, 0);
-  --primaryBlue: rgb(0 116 255);
+  --primaryBlue: rgb(0, 116, 255);
   --primaryGrey: rgb(206, 212, 218);
   --secondGrey: rgb(222, 226, 230);
   --thridGrey: rgb(233, 236, 239);
+  --primaryBorder: 2px solid rgb(0, 116, 255);
   --primaryTransition: all 0.3s linear;
 }
 /* UNIVERSAL STYLES */
@@ -23,6 +24,9 @@ body {
   font-family: "Rubik", sans-serif;
   color: var(--primaryBlack);
 }
+p {
+  font-size: 2rem;
+}
 img {
   display: block;
   width: 100%;
@@ -40,7 +44,7 @@ img {
 .section__line {
   width: 100px;
   height: 5px;
-  margin: 15px auto;
+  margin: 15px auto 30px auto;
   background-color: var(--primaryBlue);
 }
 .section__wrapper {
@@ -283,6 +287,44 @@ img {
 /* ABOUT ME */
 .about-me {
   background-color: var(--secondGrey);
+}
+.about-me__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 400px);
+  gap: 60px;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.about-me__paragraph {
+  text-align: justify;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.about-me__paragraph:last-child {
+  margin-bottom: 0;
+}
+.about-me__paragraph--bold {
+  font-weight: 700;
+}
+.about-me__paragraph--pdf {
+  color: var(--primaryBlack);
+  font-weight: 700;
+}
+.about-me__photo {
+  max-width: 400px;
+  border: var(--primaryBorder);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.about-me__photo img {
+  width: 100%;
+  transition: var(--primaryTransition);
+  transform: scale(1.1);
+}
+.about-me__photo:hover img {
+  transform: scale(1);
 }
 /* PROJECTS */
 .projects {
