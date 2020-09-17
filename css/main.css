@@ -332,7 +332,11 @@ img {
   border: var(--primaryBorder);
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
+  transition: var(--primaryTransition);
   overflow: hidden;
+}
+.about-me__photo:hover {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
 }
 .about-me__photo img {
   width: 100%;
