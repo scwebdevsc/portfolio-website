@@ -357,6 +357,39 @@ img {
 .contact-me {
   background-color: var(--thridGrey);
 }
+.contact-me__email {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.social-items {
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  gap: 20px;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.social-items__link {
+  width: 100px;
+  height: 100px;
+  text-decoration: none;
+  background-color: var(--primaryGrey);
+  border: var(--primaryBorder);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.social-items__icon {
+  font-size: 5rem;
+  text-align: center;
+  color: var(--primaryBlack);
+}
 /* FOOTER */
 .footer {
   background-color: var(--secondGrey);
