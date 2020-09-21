@@ -353,6 +353,20 @@ img {
 .skills {
   background-color: var(--secondGrey);
 }
+.skills__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  gap: 20px;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.skills__photo {
+  width: 200px;
+  border: var(--primaryBorder);
+  border-radius: 10px;
+}
 /* CONTACT ME */
 .contact-me {
   background-color: var(--thridGrey);
