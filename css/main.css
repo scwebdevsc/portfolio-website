@@ -365,6 +365,14 @@ img {
 }
 .project__top {
   position: relative;
+  overflow: hidden;
+}
+.project__photo {
+  transform: scale(1);
+  transition: var(--primaryTransition);
+}
+.project:hover .project__photo {
+  transform: scale(1.1);
 }
 .project__skills {
   position: absolute;
@@ -397,7 +405,7 @@ img {
   color: #f0db4f;
 }
 .project__bottom--black {
-  color: #fff;
+  color: var(--primaryGrey);
   background-color: var(--primaryBlack);
 }
 .project__bottom--grey {
