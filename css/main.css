@@ -501,6 +501,59 @@ img {
     display: none;
   }
 }
+/* MEDIA QUERIES FOR BANNER SECTION */
+@media screen and (max-width: 814px) {
+  .banner__heading {
+    font-size: 9rem;
+  }
+}
+@media screen and (max-width: 739px) {
+  .banner__heading {
+    font-size: 8rem;
+  }
+}
+@media screen and (max-width: 678px) {
+  .banner__paragraph {
+    font-size: 4rem;
+  }
+  .banner__btn {
+    font-size: 2rem;
+    padding: 10px 10px;
+  }
+}
+@media screen and (max-width: 663px) {
+  .banner__heading {
+    font-size: 7rem;
+  }
+}
+@media screen and (max-width: 588px) {
+  .banner__heading {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 554px) {
+  .banner__paragraph {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 513px) {
+  .banner__heading {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 437px) {
+  .banner__heading {
+    font-size: 4rem;
+  }
+  .banner__paragraph {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 362px) {
+  .banner__heading {
+    font-size: 3rem;
+  }
+}
 /* MEDIA QUERIES FOR ABOUT ME SECTION */
 @media screen and (max-width: 960px) {
   .about-me__wrapper {
@@ -529,5 +582,10 @@ img {
   .social-items {
     grid-template-columns: repeat(3, 100px);
     gap: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .contact-me__email {
+    font-size: 2rem;
   }
 }
