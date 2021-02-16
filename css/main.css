@@ -432,7 +432,7 @@ img {
   align-items: center;
 }
 .skills__photo {
-  width: 200px;
+  max-width: 200px;
   border: var(--primaryBorder);
   border-radius: 10px;
 }
@@ -483,6 +483,13 @@ img {
   text-align: center;
   padding: 40px 0;
 }
+/* MEDIA QUERIES FOR UNIVERSAL STYLES */
+@media screen and (max-width: 800px) {
+  .page__section {
+    padding: 90px 10px 50px 10px;
+  }
+}
+
 /* MEDIA QUERIES FOR HEADER SECTION */
 @media screen and (min-width: 951px) {
   .menu-wrap {
@@ -492,5 +499,12 @@ img {
 @media screen and (max-width: 950px) {
   .top__nav {
     display: none;
+  }
+}
+/* MEDIA QUERIES FOR SKILLS SECTION */
+@media screen and (max-width: 660px) {
+  .skills__wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
   }
 }
