@@ -508,3 +508,10 @@ img {
     gap: 10px;
   }
 }
+/* MEDIA QUERIES FOR CONTACT ME SECTION */
+@media screen and (max-width: 720px) {
+  .social-items {
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+  }
+}
