@@ -501,6 +501,22 @@ img {
     display: none;
   }
 }
+/* MEDIA QUERIES FOR ABOUT ME SECTION */
+@media screen and (max-width: 960px) {
+  .about-me__wrapper {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 930px) {
+  .about-me__wrapper {
+    grid-template-columns: 400px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .about-me__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 /* MEDIA QUERIES FOR SKILLS SECTION */
 @media screen and (max-width: 660px) {
   .skills__wrapper {
