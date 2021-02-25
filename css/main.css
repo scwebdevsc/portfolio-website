@@ -60,8 +60,9 @@ img {
   height: 60px;
   background-color: var(--primaryGrey);
   padding: 0 20px;
-  border-bottom: 2px solid var(--primaryBlack);
-  box-shadow: 0 1px 1px var(--primaryBlack);
+  /*border-bottom: 2px solid var(--primaryBlack);*/
+  /*box-shadow: 0 1px 1px var(--primaryBlack);*/
+  transition: var(--primaryTransition);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -126,7 +127,7 @@ img {
     width: 57px;
     height: 57px;
     padding: 10px;
-    background-color: var(--primaryGrey);
+    background-color: transparent;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -596,12 +597,15 @@ img {
     gap: 10px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .contact-me__email {
     font-size: 2rem;
   }
 }
 @media screen and (max-width: 330px) {
+  .contact-me__email {
+    font-size: 1.5rem;
+  }
   .social-items {
     grid-template-columns: repeat(3, 1fr);
   }
