@@ -156,7 +156,7 @@ img {
     top: 10px;
   }
   .menu-wrap .toggler:checked + .hamburger {
-    background-color: var(--primaryGrey);
+    background-color: transparent;
   }
   .menu-wrap .toggler:checked + .hamburger > div {
     background-color: var(--primaryBlack);
@@ -441,6 +441,31 @@ img {
   font-size: 5rem;
   text-align: center;
   color: var(--primaryBlack);
+  transition: var(--primaryTransition);
+}
+.link__github:hover .social-items__icon {
+  color: #4078c0;
+  transform: scale(1.1);
+}
+.link__stack-overflow:hover .social-items__icon {
+  color: #ef8236;
+  transform: scale(1.1);
+}
+.link__linkedin:hover .social-items__icon {
+  color: #0e76a8;
+  transform: scale(1.1);
+}
+.link__twitter:hover .social-items__icon {
+  color: #00acee;
+  transform: scale(1.1);
+}
+.link__facebook:hover .social-items__icon {
+  color: #4267b2;
+  transform: scale(1.1);
+}
+.link__instagram:hover .social-items__icon {
+  color: #c13584;
+  transform: scale(1.1);
 }
 /* FOOTER */
 .footer {
