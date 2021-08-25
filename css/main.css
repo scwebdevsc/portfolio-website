@@ -20,6 +20,7 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
+  overflow-x: hidden;
 }
 html::-webkit-scrollbar {
   width: 1rem;
@@ -608,6 +609,11 @@ img {
   .projects__wrapper {
     width: 100%;
     grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 800px) {
+  .projects {
+    padding: 25px 0 25px 0;
   }
 }
 /* MEDIA QUERIES FOR SKILLS SECTION */

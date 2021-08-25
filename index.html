@@ -38,6 +38,8 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- AOS  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- FONT AWESOME -->
     <script
       src="https://kit.fontawesome.com/4c85bc995e.js"
@@ -101,7 +103,7 @@
         <h2 class="section__heading">About me</h2>
         <div class="section__line"></div>
         <div class="about-me__wrapper section__wrapper">
-          <div class="about-me__text">
+          <div class="about-me__text" data-aos="flip-left">
             <p class="about-me__paragraph">
               My name is Srđan Cvijetić and I am a 33 year young web developer
               from Bosnia and Herzegovina.
@@ -120,10 +122,10 @@
                 target="_blank"
                 class="about-me__paragraph--pdf"
                 >The list of completed courses</a
-              >&quot; as a PDF or take a look at my projects.
+              >&quot; or take a look at my projects.
             </p>
           </div>
-          <div class="about-me__photo">
+          <div class="about-me__photo" data-aos="flip-left">
             <img
               src="img/about-me-photo.jpg"
               alt="Profile photo of Srđan Cvijetić"
@@ -137,7 +139,7 @@
         <div class="section__line"></div>
         <div class="projects__wrapper">
           <!-- PROJECT 1 -->
-          <article class="project">
+          <article class="project" data-aos="flip-left">
             <a href="https://srdancvijetic-project-4.netlify.app/" class="project__link" target="_blank">
               <div class="project__top">
                 <img src="img/project-1.png" alt="SC Travel project" class="project__photo" />
@@ -148,7 +150,7 @@
             </a>
           </article>
           <!-- PROJECT 2 -->
-          <article class="project">
+          <article class="project" data-aos="flip-left">
             <a href="https://srdancvijetic-project-4.netlify.app/" class="project__link" target="_blank">
               <div class="project__top">
                 <img src="img/project-1.png" alt="" class="project__photo" />
@@ -159,7 +161,7 @@
             </a>
           </article>
           <!-- PROJECT 3 -->
-          <article class="project">
+          <article class="project" data-aos="flip-left">
             <a href="https://srdancvijetic-project-4.netlify.app/" class="project__link" target="_blank">
               <div class="project__top">
                 <img src="img/project-1.png" alt="" class="project__photo" />
@@ -182,36 +184,42 @@
             alt="HTML5 logo"
             class="skills__photo"
             title="HTML5"
+            data-aos="flip-left"
           />
           <img
             src="img/css-logo.jpg"
             alt="CSS3 logo"
             class="skills__photo"
             title="CSS3"
+            data-aos="flip-left"
           />
           <img
             src="img/sass-logo.png"
             alt="Sass logo"
             class="skills__photo"
             title="Sass"
+            data-aos="flip-left"
           />
           <img
             src="img/res.design-logo.png"
             alt="Responsive web design logo"
             class="skills__photo"
             title="Responsive web design"
+            data-aos="flip-left"
           />
           <img
             src="img/javascript-logo.png"
             alt="JavaScript logo"
             class="skills__photo"
             title="JavaScript"
+            data-aos="flip-left"
           />
           <img
             src="img/jquery-logo.png"
             alt="jQuery logo"
             class="skills__photo"
             title="jQuery"
+            data-aos="flip-left"
           />
         </div>
       </section>
@@ -228,6 +236,7 @@
               target="_blank"
               class="social-items__link link__github"
               title="Github"
+              data-aos="flip-left"
               ><i class="fab fa-github social-items__icon"></i
             ></a>
             <!-- STACK OVERFLOW -->
@@ -236,6 +245,7 @@
               target="_blank"
               class="social-items__link link__stack-overflow"
               title="Stack Overflow"
+              data-aos="flip-left"
               ><i class="fab fa-stack-overflow social-items__icon"></i
             ></a>
             <!-- LINKEDIN -->
@@ -244,6 +254,7 @@
               target="_blank"
               class="social-items__link link__linkedin"
               title="LinkedIn"
+              data-aos="flip-left"
               ><i class="fab fa-linkedin-in social-items__icon"></i
             ></a>
             <!-- TWITTER -->
@@ -252,6 +263,7 @@
               target="_blank"
               class="social-items__link link__twitter"
               title="Twitter"
+              data-aos="flip-left"
               ><i class="fab fa-twitter social-items__icon"></i
             ></a>
             <!-- FACEBOOK -->
@@ -260,6 +272,7 @@
               target="_blank"
               class="social-items__link link__facebook"
               title="Facebook"
+              data-aos="flip-left"
               ><i class="fab fa-facebook-f social-items__icon"></i
             ></a>
             <!-- INSTAGRAM -->
@@ -268,6 +281,7 @@
               target="_blank"
               class="social-items__link link__instagram"
               title="Instagram"
+              data-aos="flip-left"
               ><i class="fab fa-instagram social-items__icon"></i
             ></a>
           </div>
@@ -280,6 +294,15 @@
         </p>
       </footer>
     </main>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init({
+      duration: 500,
+      delay: 250,
+      easing: 'ease-in-out',
+    });
+    </script> 
     <!-- JAVASCRIPT -->
     <script src="js/script.js"></script>
   </body>
