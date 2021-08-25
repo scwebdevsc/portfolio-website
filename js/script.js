@@ -17,3 +17,15 @@ document.addEventListener('scroll', () => {
     header.style.borderBottom = 'none'
   }
 });
+/* TYPEWRITING EFFECT */
+let textDiv = document.querySelector('.banner__heading');
+let text = "Srđan Cvijetić";
+let i = 0;
+function type() {
+  if(i < text.length) {
+    textDiv.innerHTML += text.charAt(i);
+    i++
+    setTimeout(type, Math.floor(Math.random() * 150) + 100);
+  } 
+}
+type();

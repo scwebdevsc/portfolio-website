@@ -491,6 +491,12 @@ img {
 }
 /* MEDIA QUERIES FOR UNIVERSAL STYLES */
 @media screen and (max-width: 800px) {
+  p {
+    font-size: 1.5rem;
+  }
+  .section__heading {
+    font-size: 3rem;
+  }
   .page__section {
     padding: 25px 10px 25px 10px;
   }
@@ -614,6 +620,9 @@ img {
 @media screen and (max-width: 800px) {
   .projects {
     padding: 25px 0 25px 0;
+  }
+  .project__bottom--text {
+    font-size: 2.5rem;
   }
 }
 /* MEDIA QUERIES FOR SKILLS SECTION */
