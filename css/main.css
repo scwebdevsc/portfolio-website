@@ -288,9 +288,12 @@ img {
   border: 5px solid var(--primaryBlue);
   border-radius: 20px;
   transition: var(--primaryTransition);
-  animation-name: banner__btn--animation;
-  animation-duration: 2s;
-  animation-timing-function: linear;
+  -webkit-animation-name: banner__btn--animation;
+          animation-name: banner__btn--animation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 .banner__btn:hover {
   transform: scale(1.1);
@@ -299,6 +302,17 @@ img {
   transform: scale(1);
 }
 /* BANNER BUTTON ANIMATION */
+@-webkit-keyframes banner__btn--animation {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes banner__btn--animation {
   0% {
     transform: scale(0);
